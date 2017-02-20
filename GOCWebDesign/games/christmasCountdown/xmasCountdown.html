@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			html {
+				background-image: url("santa(edit).jpg");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				height: 100%;
+			}
+
+			#titleDiv {
+				font-size: 40px;
+				font-family: 'Great Vibes', Century Gothic, sans-serif;
+				margin-top: 40px;
+				margin-left: 30px;
+				color: white;
+				-webkit-transform: rotate(-4deg);
+			}
+
+			#timesDiv {
+				border: 1px solid rgba(1,1,1,0);
+				margin-top: 350px;
+				margin-left: 50px;
+				width: 300px;
+			}
+
+			#datePara {
+				color: #333;
+				font-family: Century Gothic, sans-serif;
+				font-size: 150px;
+				margin-left: 100px;
+				margin-top: 00px;
+				height: 160px;
+			}
+
+			#dateText {
+				margin-left: 150px;
+				font-family: Century Gothic, sans-serif;
+				font-size: 30px;
+				color: #333;
+			}
+
+			#hoursPara {
+				color: #333;
+				font-family: Century Gothic, sans-serif;
+				font-size: 50px;
+				margin-top: 0px;
+				float: left;
+			}
+
+			#box1 {
+				width: 130px;
+				height: 80px;
+				border: 1px solid rgba(1,1,1,0);
+				float: left;
+			}
+
+			#box2 {
+				width: 210px;
+				height: 80px;
+				border: 1px solid rgba(1,1,1,0);
+				margin-top: 20px;
+				margin-left: 80px;
+				float: left;
+			}
+
+			#minutesPara {
+				color: #333;
+				font-family: Century Gothic, sans-serif;
+				font-size: 50px;
+				float: right;
+			}
+
+			#secondsPara {
+				color: #333;
+				font-family: Century Gothic, sans-serif;
+				float: right;
+				font-size: 50px;
+			}
+
+			#text {
+				font-family: Century Gothic, sans-serif;
+				font-size: 12.5px;
+				color: #333;
+			}
+
+			.invisPara {
+				color: rgba(1,1,1,0);
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var santa = new Image()
+			santa.src = "santa(edit).jpg"
+
+			var a = null;
+			var howManyInterval = null;
+			var christmas = new Date()
+			var monthDays = null;
+			var yearCheck = new Date();
+			var thisYear = yearCheck.getFullYear();
+
+			christmas.setFullYear(thisYear, 11, 25)
+			christmas.setHours(0)
+			christmas.setMinutes(0)
+			christmas.setSeconds(0)
+			christmas.setMilliseconds(0)
+
+			function howManyMonthDays() {
+				var now = new Date();
+				var monthNum = christmas.getMonth() - now.getMonth();
+				var year = now.getFullYear();
+				if (year%4 == 0) {
+					if (monthNum == 11) {monthDays = 335}
+					else if (monthNum == 10) {monthDays = 306}
+					else if (monthNum == 9) {monthDays = 275}
+					else if (monthNum == 8) {monthDays = 245}
+					else if (monthNum == 7) {monthDays = 214}
+					else if (monthNum == 6) {monthDays = 184}
+					else if (monthNum == 5) {monthDays = 153}
+					else if (monthNum == 4) {monthDays = 122}
+					else if (monthNum == 3) {monthDays = 92}
+					else if (monthNum == 2) {monthDays = 61}
+					else if (monthNum == 1) {monthDays = 31}
+					else if (monthNum == 0) {monthDays = 0}
+				}
+
+				else {
+					if (monthNum == 11) {monthDays = 334}
+					else if (monthNum == 10) {monthDays = 306}
+					else if (monthNum == 9) {monthDays = 275}
+					else if (monthNum == 8) {monthDays = 245}
+					else if (monthNum == 7) {monthDays = 214}
+					else if (monthNum == 6) {monthDays = 184}
+					else if (monthNum == 5) {monthDays = 153}
+					else if (monthNum == 4) {monthDays = 122}
+					else if (monthNum == 3) {monthDays = 92}
+					else if (monthNum == 2) {monthDays = 61}
+					else if (monthNum == 1) {monthDays = 31}
+					else if (monthNum == 0) {monthDays = 0}
+				}
+			}
+
+			function howManyDays() {
+				howManyMonthDays();
+				var now = new Date()
+				var christmasMonth = christmas.getMonth();
+				var christmasDate = christmas.getDate();
+				var todayMonth = now.getMonth()
+				var todayDate = now.getDate();
+				var datePara = document.getElementById('datePara');
+				var days = parseInt((christmasDate-(todayDate+1))+monthDays);
+				datePara.innerHTML = days;
+				if(days < 10) {
+					datePara.innerHTML = "0"+days;
+				}
+				else if(days <= 0) {
+					datePara.innerHTML = "00"
+				}
+				else if(days > 99) {
+					datePara.style.cssText += "margin-left: 60px;"
+				}
+			}
+
+			function howManyHours() {
+				var now = new Date();
+				var todayHour = now.getHours();
+				var hoursPara = document.getElementById('hoursPara');
+				var ans = parseInt(24-(todayHour+1));
+				hoursPara.innerHTML = ans;
+				if (ans < 10) {
+					hoursPara.innerHTML = "0"+ans;
+				}
+				else if(ans <= 0) {
+					hoursPara.innerHTML = "00"
+				}
+			}
+
+			function howManyMinutes() {
+				var now = new Date()
+				var todayMinute = now.getMinutes();
+				var minutesPara = document.getElementById('minutesPara');
+				var ans = parseInt(60-(todayMinute+1));
+				minutesPara.innerHTML = ans;
+				if (ans < 10) {
+					minutesPara.innerHTML = "0"+ans;
+				}
+				else if(ans <= 0) {
+					minutesPara.innerHTML = "00"
+				}
+			}
+
+			function howManySeconds() {
+				var now = new Date();
+				var todaySecond = now.getSeconds();
+				var secondsPara = document.getElementById('secondsPara');
+				var ans = parseInt(60-(todaySecond+1));
+				secondsPara.innerHTML = ans;
+				if (ans < 10) {
+					secondsPara.innerHTML = "0"+ans;
+				}
+				else if(ans <= 0) {
+					secondsPara.innerHTML = "00"
+				}
+			}
+
+			function isItChristmas() {
+				var now = new Date();
+				var todayDate = now.getDate();
+				var todayHour = now.getHours();
+				var todayMinute = now.getMinutes();
+				var todaySecond = now.getSeconds();
+				if(todayDate===0&&todayHour===0&&todayMinute===0&&todaySecond===0) {
+					document.getElementById('titleDiv').innerHTML = "HAPPY CHRISTMAS!"
+				}
+			}
+
+			function calculate() {
+				howManyHours();
+				howManyDays();
+				howManyMinutes();
+				howManySeconds();
+				isItChristmas();
+			}
+			setInterval(calculate, 50)
+
+			document.addEventListener('keydown', function(event) {
+				var key_press = String.fromCharCode(event.key_code);
+				var key_code = event.key_code; 
+				if(key_code == "27") {
+					clearInterval(calculate)
+				}
+			})
+		</script>
+		<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+		<div id="titleDiv">How Many Days 'Till</div>
+		<div id="timesDiv">
+			<div id="datePara"></div><div id="dateText"><strong>Days</strong></div>
+			<div id="box2">
+				<div id="box1">
+					<div id="hoursPara"></div>
+					<div id="minutesPara"></div>
+					<div id="text"><strong class = "invisPara">..</strong>Hours<strong class="invisPara">...........</strong>Minutes<strong class="invisPara">.........</strong>Seconds</div>
+				</div>
+				<div id="secondsPara"></div>
+			</div>
+		</div>
+	</body>
+</html>

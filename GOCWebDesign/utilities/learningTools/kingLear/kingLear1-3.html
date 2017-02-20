@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quotes Test (Acts 1 + 3)</title>
+	<style type="text/css">
+		body {
+			background-image: url("kingLear.png");
+			background-repeat: no-repeat;
+			background-size: 100% 10000%
+		}
+	</style>
+</head>
+<body>
+	<script type = "text/javascript">
+		var quotes = [{speaker: "Gloucester", text: "His breeding, sir, hath been at my charge: I have so often blushed to acknowledge him"},
+			  {speaker: "Lear", text: "know that we have divided in three our kingdom: and 'tis our fast intent to shake all cares and business from our age"},
+			  {speaker: "Goneril", text: "Sir, I love you more than words can wield the matter; Dearer than eye-sight, space and liberty"},
+			  {speaker: "Regan", text: "Sir, I am made Of the self-same metal that my sister is"},
+			  {speaker: "Cordelia", text: "I am sure, my love's More richer than my tongue"},
+			  {speaker: "Lear", text: "Nothing will come of nothing: speak again"},
+			  {speaker: "Cordelia", text: "Unhappy that I am, I cannot heave My heart into my mouth: I love your majesty According to my bond; nor more nor less"},
+			  {speaker: "Kent", text: "Be Kent unmannerly, when Lear is mad. What wilt thou do, old man? Think'st thou that duty shall have dread to speak, When power to flattery bows"},
+			  {speaker: "King of France", text: "Love's not love when it is mingled with regards that stand Aloof from the entire point"},
+			  {speaker: "Regan", text: "'Tis the infirmity of his age: yet he hath but ever slenderly known himself"},
+			  {speaker: "Edmund", text: "The base shall top the legitimate. I grow; I prosper: Now, gods, stand up for bastards!"},
+			  {speaker: "Fool", text: "Now thou art an O without a figure: I am better than thou art now; I am a fool, thou art nothing"},
+			  {speaker: "Lear", text: "Ingratitude, thou marble-hearted fiend, More hideous when thou show'st thee in a child Than the sea-monster"},
+			  {speaker: "Edmund", text: "Thou, nature, art my goddess; to thy law My services are bound. Wherefore should I stand in the plague of custom, and permit The curiosity of nations to deprive me, ...Why bastard? wherefore base?"},
+			  {speaker: "Gloucester", text: "These late eclipses in the sun and moon portend no good to us: love cools, friendship falls off, brothers divide the bond crack'd twixt father and son"},
+			  {speaker: "Edmund", text: "A credulous father! and a brother noble, Whose nature is so far from doing harms, That he suspects none: on whose foolish honesty My practises ride easy!"},
+			  {speaker: "Goneril", text: "Idle old man, That still would manage those authorities That he hath given away!"},
+			  {speaker: "Knight", text: "Your highness is not entertained with that cermonious affection as you were wont"},
+			  {speaker: "Fool", text: "Lear's shadow"},
+			  {speaker: "Lear", text: "I am ashamed. That thou hast power to stake my manhood thus; That these hot tears, which break from me perforce, Should make thee worth them"},
+			  {speaker: "Fool", text: "If thou wert my fool, nuncle, I'd have thee beaten for being old before thy time"},
+			  {speaker: "Lear", text: "O, let me not be mad, not mad, sweet heaven Keep me in temper: I would not be mad!"},
+			  {speaker: "Lear", text: "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes,"},
+			  {speaker: "Lear", text: "Singe my white head! And thou, all-shaking thunder, Strike flat the thick rotundity o' the world!"},
+			  {speaker: "Lear", text: "Crack nature's molds, all germens spill at once That make ingrateful man!"},
+			  {speaker: "Lear", text: "I am a man, More sinn'd against than sinning"},
+			  {speaker: "Lear", text: "The art of our necessities is strange, And can make vile things precious"},
+			  {speaker: "Lear", text: "O, that way madness lies; let me shun that;"},
+			  {speaker: "Lear", text: "Poor naked wretches, wheresoe'er you are, That bide the pelting of this pitiless storm,"},
+			  {speaker: "Lear", text: "O! I have ta'en Too little care of this! Take physic, pomp; Expose thyself to feel what wretches feel,"},
+			  {speaker: "Lear", text: "unaccomodated man is no more but such a poor, bare, forked animal as thou art"},
+			  {speaker: "The Fool", text: "He's mad, that trusts in the tameness of a wolf, a horse's health, a boy's love, or a whore's oath"},
+			  {speaker: "Regan", text: "Go, thrust him out at gates, and let him smell His way to Dover"},]
+
+		var usedNumbers = [];
+		var unusedQuotesArray = quotes;
+		var tempArray = [];
+
+		function startQuestions() {
+			//var ready = confirm("Ready?");
+			var ready = true;
+			if(ready == true) {
+				var randNum = Math.floor(Math.random()*(unusedQuotesArray.length));
+				var chosenQuote = unusedQuotesArray[randNum].text;
+				var chosenSpeaker = unusedQuotesArray[randNum].speaker;
+				tempArray = [];
+				for(var i = 0; i < unusedQuotesArray.length; i++) {
+					if(i !== randNum) {
+						tempArray.push(unusedQuotesArray[i]);
+					}
+					else {
+					}
+				}
+				unusedQuotesArray = tempArray;
+				if(unusedQuotesArray.length == 0) {
+					unusedQuotesArray = quotes; 
+					tempArray = [];
+				}
+				var wordsArray = chosenQuote.split(' ');
+				var hintString = (wordsArray[0]+" "+wordsArray[1]+" "+wordsArray[2]).toString();
+				if (chosenQuote == quotes[18].text) {
+					hintString = "______ ______";
+				}
+				else {};
+
+				var answer = prompt("Include hint in answer!!\n"+chosenSpeaker+": "+hintString);
+				if(answer.toString().toLowerCase() == chosenQuote.toLowerCase()) {
+					alert("Correct!!\n\nQuote:\n"+chosenSpeaker+": "+chosenQuote);		
+				}
+				else {
+					alert("Incorect :(\n\nYour answer:\n"+chosenSpeaker+": "+answer.toString()+"\n\nQuote:\n"+chosenSpeaker+": "+chosenQuote)
+				}
+				startQuestions();
+			}
+		}
+		window.addEventListener('load', function(event) {//simply starts the game only once the page has loaded
+			alert("King Lear Quotes Test(Acts 1-3)\n\nTo stop just press cancel at any time.\nRemember to include the hint in your answer\nIf you don't know just press OK, the answer will be revealed anyway\n\nTo start just press OK")
+			startQuestions();
+		})
+	</script>
+</body>
+</html>

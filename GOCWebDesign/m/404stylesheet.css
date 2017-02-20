@@ -1,0 +1,428 @@
+@media (max-width: 350px) {							/*anything less than 350px*/
+	a {
+		text-decoration: none;
+		color: #F8FF00;
+	}
+
+	body {
+		color: #F8FF00;
+		background-color: #62A1BC;
+	}
+
+	#pullMeDiv {
+		position: fixed;
+		width: 50px;
+		height: 25px;
+		background-color: blue;
+		margin-top: 30px;
+		margin-left: -10px;
+		opacity: .5;
+		font-size: 12px;
+	}
+
+	#nav {
+		background-color: rgb(98,161,188);
+		opacity: 0;
+		left: -600px;
+		top: 40px;
+		width: 600px;
+		height: 100%;
+		transition: left 0s linear 0s, opacity 0.3s linear 0s;
+		position: fixed;
+	}
+
+	#navPanelButton {
+		position: fixed;
+		right: 20px;
+		width: 20px;
+		height: 24px;
+		background: linear-gradient(#FFF,#DDD);
+		border: #AAA 1px solid;
+		border-radius: 2px;
+		padding: 2px 5px;
+		cursor: pointer;
+		transition: border 0.3s linear 0s;
+		margin-top: 30px;
+	}
+
+	#navPanelButton:hover {
+		border: #06F 1px solid;
+	}
+
+	#navPanelButton:hover div{
+		background: #06F;
+	}
+
+	#navPanelButton > div{
+		width: 20px;
+		height: 4px;
+		background: #333;
+		margin: 3px 0px;
+		border-radius: 4px;
+		transition: background 0.3s linear 0s;
+	}
+
+
+	#header {
+		position: fixed;
+		color: #F8FF00;
+		background-color: #62A1BC;
+		height: 63px;
+		width: 100%;
+		margin-top: -80px;
+	}
+
+	#headerPara {
+		font-family: 'Architects Daughter', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		margin-right: 10px;
+	}
+	
+	#headerSubTitle {
+		font-family: 'Architects Daughter', sans-serif;
+		text-align: center;
+		font-size: 30px;
+		margin-bottom: 0px;
+	}
+	
+	.linkButton {
+		cursor: pointer;
+		width: 175px;
+		height: 50px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		background-color: #62A1BC;
+		color: #F8FF00;
+		font-size: 50px;
+		font-style: normal;
+		text-align: center;
+		opacity: 1;
+		margin-left: 65px;
+		border: 6px solid #F8FF00;
+		border-radius: 6px;
+	}
+
+	#main {
+		margin-top: 60px;
+	}
+
+	#footer {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 600px) and (min-width: 350px) {	/*anything over 350px and less than 600px*/
+	a {
+		text-decoration: none;
+		color: #F8FF00;
+	}
+
+	body {
+		color: #F8FF00;
+		background-color: #62A1BC;
+	}
+
+	#nav {
+		background-color: rgb(98,161,188);
+		opacity: 0;
+		left: -600px;
+		top: 40px;
+		width: 600px;
+		height: 100%;
+		transition: left 0s linear 0s, opacity 0.3s linear 0s;
+		position: fixed;
+	}
+
+	#navPanelButton {
+		position: fixed;
+		right: 20px;
+		width: 20px;
+		height: 24px;
+		background: linear-gradient(#FFF,#DDD);
+		border: #AAA 1px solid;
+		border-radius: 2px;
+		padding: 2px 5px;
+		cursor: pointer;
+		transition: border 0.3s linear 0s;
+		margin-top: 30px;
+	}
+
+	#navPanelButton:hover {
+		border: #06F 1px solid;
+	}
+
+	#navPanelButton:hover div{
+		background: #06F;
+	}
+
+	#navPanelButton > div{
+		width: 20px;
+		height: 4px;
+		background: #333;
+		margin: 3px 0px;
+		border-radius: 4px;
+		transition: background 0.3s linear 0s;
+	}
+
+
+	#header {
+		position: fixed;
+		color: #F8FF00;
+		background-color: #62A1BC;
+		height: 100px;
+		width: 100%;
+		margin-top: -80px;
+	}
+
+	#headerPara {
+		font-family: 'Architects Daughter', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		margin-right: 10px;
+        margin-bottom: 0px;
+	}
+	
+	#headerSubTitle {
+		font-family: 'Architects Daughter', sans-serif;
+		font-size: 30px;
+		text-align: center;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+
+	.linkButton {
+		cursor: pointer;
+		width: 200px;
+		height: 75px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		background-color: #62A1BC;
+		color: #F8FF00;
+		font-size: 50px;
+		font-style: normal;
+		text-align: center;
+		opacity: 1;
+		margin-left: 75px;
+		border: 6px solid #F8FF00;
+		border-radius: 6px;
+	}
+
+	#main {
+		margin-top: 60px;
+	}
+
+	#footer {
+		font-size: 8px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 850px) {	/*anything over 600px and less than 850px*/
+	a {
+		text-decoration: none;
+		color: #F8FF00;
+	}
+
+	body {
+		margin: 0px; 
+	}
+
+	#errorMessageDiv {
+		font-size: 30px;
+	}
+
+	#navPanelButton {
+		background-color: rgba(100,0,0,0);
+	}
+
+	#mainDiv {
+		display: flex;
+		flex-flow: row wrap;
+	} 
+
+	#header {
+		color: #F8FF00;
+		background-color: #62A1BC;
+		order: 1;
+		flex: 0 1 100%;
+	}
+
+	#nav {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 2;
+		flex: 0 1 200px;
+		font-family: 'Architects Daughter', sans-serif;
+	}
+
+	#main {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 3;
+		min-height: 400px;
+		min-width: 200px;
+		flex: 1;
+	}
+
+	#footer {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 5;
+		height: 100px;
+		flex: 0 1 100%;
+	}
+
+	.linkButton {
+		cursor: pointer;
+		width: 200px;
+		height: 75px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		background-color: #62A1BC;
+		color: #F8FF00;
+		font-size: 50px;
+		font-style: normal;
+		text-align: center;
+	}
+
+
+	#headerPara {
+	    color: #F8FF00;
+	    margin-top: 0px;
+	    text-align: center;
+	    font-size: 70px;
+	    font-family: 'Architects Daughter', sans-serif;
+	    height: 40px;
+	}
+	
+	#headerSubTitle {
+		text-align: center;
+		font-family: 'Architects Daughter', sans-serif;
+		font-size: 50px;
+		margin-bottom: 0px;
+	}
+	
+	#homeDiv {
+		margin-top: 40px;
+	}
+
+	#mainContent {
+		border: 6px inset #4986ca;
+		height: 1000px;
+		width: 96%;
+		margin-left: 1.3%;
+		font-family: 'Architects Daughter', sans-serif;
+		margin-top: 30px;
+	}
+        
+    #utilitiesDiv {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 850px) {							/*anything over 850px*/
+	a {
+		text-decoration: none;
+		color: #F8FF00;
+	}
+
+	body {
+		margin: 0px; 
+	}
+
+	#errorMessageDiv {
+		font-size: 30px;
+	}
+
+	#navPanelButton {
+		background-color: rgba(100,0,0,0);
+		height: 50px;
+		width: 50px;
+	}
+
+	#mainDiv {
+		display: flex;
+		flex-flow: row wrap;
+	} 
+
+	#header {
+		color: #F8FF00;
+		background-color: #62A1BC;
+		order: 1;
+		flex: 0 1 100%;
+	}
+
+	#nav {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 2;
+		flex: 0 1 200px;
+		font-family: 'Architects Daughter', sans-serif;
+	}
+
+	#main {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 3;
+		min-height: 400px;
+		height: auto;
+		min-width: 200px;
+		flex: 1;
+	}
+
+	#footer {
+		background-color: #62A1BC;
+		color: #F8FF00;
+		order: 5;
+		height: 100px;
+		flex: 0 1 100%;
+	}
+
+	.linkButton {
+		cursor: pointer;
+		width: 200px;
+		height: 75px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		background-color: #62A1BC;
+		color: #F8FF00;
+		font-size: 50px;
+		font-style: normal;
+		text-align: center;
+	}
+
+
+	#headerPara {
+	    color: #F8FF00;
+	    margin-top: 0px;
+	    text-align: center;
+	    font-size: 92px;
+	    font-family: 'Architects Daughter', sans-serif;
+	    height: 40px;
+	}
+
+	#headerSubTitle {
+		text-align: center;
+		font-family: 'Architects Daughter', sans-serif;
+		font-size: 50px;
+		margin-bottom: 0px;
+	}
+	
+	#homeDiv {
+		margin-top: 40px;
+	}
+
+	#mainContent {
+		border: 6px inset #4986ca;
+		height: auto;
+		min-height: 1000px;
+		width: 96%;
+		margin-left: 1.3%;
+		font-family: 'Architects Daughter', sans-serif;
+		margin-top: 30px;
+	}
+        
+    #utilitiesDiv {
+        cursor: pointer;
+    }
+}

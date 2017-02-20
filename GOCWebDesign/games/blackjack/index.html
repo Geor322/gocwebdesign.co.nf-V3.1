@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body>
+		<div id="mainDiv">
+			<div id="playerCardsDiv">
+				<p id="playerTitlePara">Player</p>
+				<div id="playerCard1Div" class="playerCardDiv"></div>
+				<div id="playerCard2Div" class="playerCardDiv"></div>
+			</div>
+			<div id="dealerCardsDiv">
+				<p id="dealerTitlePara">Dealer</p>
+				<div id="dealerCard1Div" class="dealerCardDiv"></div>
+				<div id="dealerCard2Div" class="dealerCardDiv"></div> 
+			</div>
+		</div>		
+		<div id="yourBetDiv">
+			<h5 id="yourBetDivHeader">Your Bet:</h5>
+			<div id="yourBetDivContent"></div>
+		</div>
+		<div id="initialBettingDiv">
+			<div id="firstBetHeader">Enter Your Initial Bet:</div>
+			<input type="number" id="enterFirstBetStepper" min="100" max="10000" value="10000"/>
+			<div id="submitFirstBetButton" onclick="submitFirstBet()">Submit</div>
+		</div>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+		<script src="jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

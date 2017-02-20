@@ -1,0 +1,123 @@
+body {
+	background-color: green;
+}
+
+#mainDiv {
+	width: 1000px;
+	height: 500px;
+}
+
+#initialBettingDiv {
+	width: 800px;
+	height: 400px;
+	background-color: darkgreen;
+	opacity: 1;
+	left: 250px;
+	top: 250px;
+	position: fixed;
+}
+
+#submitFirstBetButton {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	border: 2px solid orange;
+	color: yellow;
+	background-color: red;
+	margin-top: 15px;
+	margin-left: 325px;
+	cursor: pointer;
+	font-size: 47px;
+}
+
+#submitFirstBetButton:hover {
+	background-color: green;
+	border-color: yellow;
+}
+
+#firstBetHeader {
+	color: red;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 30px;
+}
+
+#enterFirstBetStepper {
+	width: 200px;
+	height: 75px;
+	font-size: 30px;
+	font-family: sans-serif;
+	margin-left: 300px;
+	margin-top: 70px;
+}
+
+#playerCardsDiv {
+	float: left;
+}
+
+.playerCardDiv {
+	width: 70px;
+	height: 100px;
+	border: 1px solid black;
+	color: red;
+	font-size: 70px;
+	text-align: center;
+	margin-left: 10px;
+	float: right;
+}
+
+.playerNewCardDiv {
+	width: 70px;
+	height: 100px;
+	border: 1px solid black;
+	color: red;
+	font-size: 70px;
+	text-align: center;
+	margin-left: 10px;
+	float: right;
+}
+
+#dealerCardsDiv {
+	float: right;
+	margin-right: 100px
+}
+
+.dealerCardDiv {
+	width: 70px;
+	height: 100px;
+	border: 1px solid black;
+	color: red;
+	font-size: 70px;
+	text-align: center;
+	margin-left: 10px;
+	float: right;
+}
+
+.dealerNewCardDiv {
+	width: 70px;
+	height: 100px;
+	border: 1px solid black;
+	color: red;
+	font-size: 70px;
+	text-align: center;
+	margin-left: 10px;
+	float: right;
+}
+
+#yourBetDiv {
+	width: 300px;
+	height: 150px;
+	border: 1px solid black;
+	float: bottom;
+	font-size: 25px;
+	margin-top: -300px;
+}
+
+#yourBetDivHeader {
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+#yourBetDivContent {
+	margin-top: -20px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chemistry Test 07/12/16</title>
+</head>
+<body>
+	<script type = "text/javascript">
+		var quotes = [{name: "Element", def: "A substance that cannot be broken down into simpler substances by chemical means"},
+					  {name:"Atom", def: "Single, neutral units"},
+					  {name:"Molecule", def: "Two or more atoms combined, neutral"},
+					  {name:"Ion", def: "Either single units(simple) or groups(complex) with a charge"},
+					  {name:"Metal", def: "Any element that loses electrons to form a positive ion"},
+					  {name:"Atomic Number", def: "The number of protons present in the nucleus of an atom"},
+					  {name:"Mass Number", def: "The number of protons plus neutrons in the nucleus of an atom"},
+					  {name:"Isotopes", def: "Isotopes are atoms of the same element but with different mass numbers due to the different numbers of neutrons present in the nucleus"},
+					  {name:"Relative Atomic Mass Number", def: "The average mass of an atom of an element compared to 1/12 the mass of the carbon-12 isotope, taking relative abundances into account"},
+					  {name:"Principle of Mass Spectrometer", def: "The principle involved is that different ions are speperated according to their masses when moving in a magnetic field"},
+					  {name:"Stages of the Mass Spectrometer", def: "Vaporisation, Ionisation, Acceleration, Deflection, Detection"},
+					  {name:"Dobereiner's Triads", def: "Groups of three elements with similar properties where the atomic weight of one of these elements was midway between the other two"},
+					  {name:"Law of Octaves", def: "When listed in order of increasing atomic weight, every eigth element in the first sixteen elements has similar properties to the first one"},
+					  {name:"Cathode Rays", def: "Rays of light coming from the negative electrode towards the positive electrode in a vacuum"},
+					  {name:"Radioactivity", def: "The spontaneous disintegration of the nucleus with the emission of alpha, beta or gamma radiation"},
+					  {name:"Alpha Particles", def: "Positive particles, two protons and two neutrons, not very penetrating"},
+					  {name:"Beta Particles", def: "Negative particles, high speed electrons, moderately penetrating"},
+					  {name:"Gamma Rays", def: "Neutral, high energy electro-magnetic radiation, extremely penetrating"},
+					  {name:"Half-Life", def: "The time taken for half the nuclei in a given sized sample to decay"},
+					  {name:"Nuclear Reaction", def: "A nuclear reaction involves a change in the nucleus of an atom and a new element is usually formed as a result"},
+					  {name:"Chemical Reaction", def: "A chmical reaction involves electrons being shared or transferred from one atom to another - the nucleus of the atom remains the same"},
+					  {name:"Nuclear Fission", def: "Splitting of the nucleus into 2 roughly equal fragments where very large quantities of energy are given out and usually leads to chain reactions"},
+					  {name:"Nuclear Fusion", def: "The joining of two smaller nuclei to form a larger one. Energy is given out"},
+					  {name:"Heisenberg's Uncertainty Principle", def: "It is impossible to know both the position and the velocity of an electron at the same time as electrons move in wave motion"},
+					  {name:"Energy Level", def: "Is the discrete amount of energy an electron has when it is in an atom"},
+					  {name:"Energy Sublevel", def: "A group of atomic orbitals within an atom, all of which have the same energy"},
+					  {name:"Atomic Orbital", def: "A region in space around the nucleus of an atom in which there is a high probability of finding an electron"},
+					  {name:"Aufbau Principle", def: "Electrons occupy the lowest available energy level"},
+					  {name:"Hund's Rule of Maximum Multiplicity", def: "When two or more orbitals of equal energy are available, electrons fill them singly before filling them in pairs"},
+					  {name:"Pauli Exclusion Principle", def: "No more than two electrons can occupy an orbital and this they can only do if they have opposite spin"},
+					  {name:"S/P/D - Block Elements", def: "Elements that have their highest energy electron in an s/p/d orbital"},
+					  {name:"Transition Metal", def: "One that forms at least one ion with a partially filled d sublevel"},
+					  {name:"Flame Test Results: [Sodium],[Potassium],[Copper],[Lithium],[Strontium]", def: "Amber, Lilac, Green, Crimson, Red"},
+					  {name:"Compound", def: "A compound is a substance that is made up of two or more elements chemically combined"},
+					  {name:"Octet Rule", def: "When atoms bond, most atoms tend to want an electron arrangement of eight electrons in their outermost shell"},
+					  {name:"Valency", def: "The valency of an atom tells us the number of chemical bonds an atom can form"},
+					  {name:"Atomic Radius", def: "The atomic radius is obtained by getting half the distance between the centres of singly bonded atoms of the same element"},
+					  {name:"Electronegativity", def: "The relative power of attraction an atom has for the shared pair of electrons in a covalent bond"},
+					  {name:"Covalent Bonding", def: "Occurs when electrons are shared between atoms"},
+					  {name:"Localised", def: "This means that electrons are not free to move from atom to the next, but are held between two atoms"},
+					  {name:"Sigma Bonding", def: "When orbitals overlap 'head-on'. This can occur between two 's' orbitals, an 's' and a 'p' orbital, or two 'p' orbitals"},
+					  {name:"Pi Bonding", def: "When orbitals overlap 'sideways'. This can occur between two 'p' orbitals only"},
+					  {name:"Pure Covalent Bonding", def: "Occurs when electrons are shared equally between atoms"},
+					  {name:"Polar Covalent Bonding", def: "Occurs when atoms are shared unequally between atoms"},
+					  {name:"Dative Covalent Bonding(Intramolecular)", def: "Sometimes one atom supplies the electrons needed to make a covalent bond. In a dative bond one atoms gives both the electrons to the bond"},
+					  {name:"Hydrogen Bonding(Intermolecular)", def: "A hydrogen bond is a force of attraction that occurs between molecules when hydrogen is bonded to a smaller, more electronegative element such as O,F or N"},
+					  {name:"A Mole", def: "A mole of substance is that amount of it which contains the Avogrado's constant number of particles"},
+					  {name:"Avogrado's Constant(6x10^23)", def: "Is the number of carbon atoms in exactly 12 grams of the C-12 isotope"},
+					  {name:"Avogrado's Law", def:"Equal volumes of all gases measured at the same temperature and pressure contain equal numbers of molecules"},
+					  {name:"Molar Mass", def:"The mass of one mole of a substance is its relative atomic mass or its relative molecular mass expressed in grams"},
+					  {name:"Molar Volume", def:"At s.t.p. the volume of one mole of any gas is 22.4 litres(22,400cm^3)"},
+					  {name:"Valence Shell Electron Pair Repulsion Theory(VSEPR Theory)", def:"The outermost pairs of electrons in a molecule try to get as far away from each other as possible so as to minimise the repulsion between these electrons"},
+					  {name:"Bonding Pairs", def:"These are pairs of electrons in the outermost shell that are taking part in bonding. These types of electrons are shared between atoms"},
+					  {name:"Lone Pairs", def:"These are pairs of electrons in the outermost shell that do not take part in bonding. These electrons are not shared. The lone pairs of the central atom are the ones that affect the shape"},
+					  {name:"Oxidation", def:"Oxidation of an element occurs when the element loses electrons"},
+					  {name:"Reduction", def:"Reduction of an element occurs when the element gains electrons"},
+					  {name:"Oxidising Agent", def:"The element that gains the electrons"},
+					  {name:"Reducing Agent", def:"The element that loses the electrons"},
+					  {name:"Oxidation Number", def:"The oxidation number of an element is the charge an element has or appears to have when it is in a compound when certain rules are applied"},
+					  {name:"Acid (Arrhenius' Theory of Acids and Bases)", def:"An acid produces H+ ions in water"},
+					  {name:"Base (Arrhenius' Theory of Acids and Bases)", def:"A base produces OH- ions in water"},
+					  {name:"Monobasic Acid", def:"A monobasic acid produces one H+ ion in solution"},
+					  {name:"Dibasic Acid", def:"A dibasic acid produces two H+ ions in solution"},
+					  {name:"Tribasic Acid", def:"A tribasic acid produces three H+ ions in solution"},
+					  {name:"Acid (Bronsted-Lowry Theory of Acids and Bases)", def:"An acid is a proton donor"},
+					  {name:"Base (Bronsted-Lowry Theory of Acids and Bases)", def:"A base is a proton acceptor"},
+					  {name:"Amphoteric", def:"A substance that can act as both an acid and a base"},
+					  {name:"Conjugate Pairs", def:"Two species that differ by one H+ ion"},
+					  {name:"Conjugate Acid", def:"A base plus a H+ ion"},
+					  {name:"Conjugate Base", def:"An acid minus a H+ ion"},
+					  {name:"Salts", def:"A salt is formed when the H+ of the acid is replaced by a metal ion or the Ammonium Ion"},
+					  {name:"Strong Acid", def:"A strong acid is an acid that dissociates fully in solution and is a good proton donor"},
+					  {name:"Weak Acid", def:"A weak acid is a poor proton donor and only slightly dissociates in solution"},]
+
+		var usedNumbers = [];
+		var unusedQuotesArray = quotes;
+		var tempArray = [];
+
+		function startQuestions() {
+			//var ready = confirm("Ready?");
+			var ready = true;
+			if(ready == true) {
+				var randNum = Math.floor(Math.random()*(unusedQuotesArray.length));
+				var chosenQuote = unusedQuotesArray[randNum].name;
+				var def = unusedQuotesArray[randNum].def;
+				console.log(randNum);
+				tempArray = [];
+				for(var i = 0; i < unusedQuotesArray.length; i++) {
+					if(i !== randNum) {
+						tempArray.push(unusedQuotesArray[i]);
+					}
+					else {
+					}
+				}
+				unusedQuotesArray = tempArray;
+				if(unusedQuotesArray.length == 0) {
+					unusedQuotesArray = quotes; 
+					tempArray = [];
+				}
+				var answer = prompt("Define: "+chosenQuote);
+
+
+				if(answer.toString().toLowerCase() == def.toLowerCase()) {
+					alert("Correct!!\n\n"+chosenQuote+":\n\n"+def);		
+				}
+				else {
+					alert("Incorect :(\n\n"+chosenQuote+"\n\nYour Answer: "+answer+"\n\nActual Answer: "+def );
+				}
+				startQuestions();
+			}
+		}
+		window.addEventListener('load', function(event) {//simply starts the game only once the page has loaded
+			alert("To stop just press cancel at any time.\nIf you don't know just press OK, the answer will be revealed anyway\n\nTo start just press OK")
+			startQuestions();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Physics Test 07/12/16</title>
+</head>
+<body>
+	<script type = "text/javascript">
+		var quotes = [{name:"Vector", def:"A vector quantity is a quantity with noth magnitude and direction"},
+					  {name:"Scalar", def:"A scalar quantity is a quantity with with magnitude but not direction"},
+					  {name:"Displacement", def:"Displacement is the distance travalled in a particular direction"},
+					  {name:"Speed", def:"Distance divided by time"},
+					  {name:"Velocity", def:"Displacement divided by time"},
+					  {name:"Acceleration", def:"Final velocity minus starting velocity divided by time taken"},
+					  {name:"Terminal Velocity", def:"When the up and down forces equal the object stops accelerating"},
+					  {name:"Newton's First Law", def:"A body continues in a state of rest or uniform motion in a straight line unless a resultant external force acts on it"},
+					  {name:"Inertia", def:"An object's refusal to change their state of motion"},
+					  {name:"Friction", def:"Friction is a force that opposes the relative motion of two objects in contact"},
+					  {name:"Momentum", def:"The momentum of a body is the mass multiplied by the velocity"},
+					  {name:"Newton's Second Law", def:"When a resultant external force acts on a body, the rate of change of momentum of the body is proportional to this force and takes place in the direction of the force"},
+					  {name:"Mass", def:"The mass of a body is the measure of its inertia, i.e. its reluctance to change velocity"},
+					  {name:"Weight", def:"The weight of a body is the force of gravity acting on the body"},
+					  {name:"Newton's Third Law", def:"To every action there is an equal and opposite reaction. Action and reaction do not happen on the same body"},
+					  {name:"Conservation of Momentum", def:"When two or more bodies interact in a closed system, the total momentum of the bodies before the interaction equals the total momentum of the bodies after the interaction"},
+					  {name:"Work", def:"Work is force multiplied by displacement"},
+					  {name:"Energy", def:"Energy is the ability to do work"},
+					  {name:"Conservation of Energy", def:"Energy cannot be created or destroyed but may change from one form to another"},
+					  {name:"Power", def:"Power is the rate at which work is done"},
+					  {name:"Pressure", def:"Pressure is force per unit area"},
+					  {name:"Density", def:"Density is mass divided by volume"},
+					  {name:"Archimedes' Principle", def:"When an object is immersed in a fluid it will experience an upthrust equal in manitude to the weight of the fluid displaced"},
+					  {name:"Law of Floatation", def:"When an object floats the weight of the object equals the weight of the fluid displaced"},
+					  {name:"Boyle's Law", def:"For a fixed mass of gas at a fixed temperature, the pressure of the gas is inversely proportional to the volume of the gas"},
+					  {name:"Moment of a Force", def:"The moment of a force tells you how much spin the force will cause"},
+					  {name:"Moment of a Couple", def:"The moment of a couple is the force mutiplied by the perpendicular distance between the lines of action"},
+					  {name:"Lever", def:"A lever is a simple machine consisting of a rigid body which is free to rotate about a fixed point called an axis or a fulcrum"},
+					  {name:"Laws of Equilibrium", def:"A body is in equilibrium if the vector sum of the forces in any direction on the body is zero and the sum of the moment of the forces about any point on the body is zero"},
+					  {name:"Angle in Radians", def:"The angle in radians is the arc length over the radius length"},
+					  {name:"Angular Velocity", def:"Angular velocity is the change in angular displacement over time"},
+					  {name:"Centripetal Acceleration", def:"Centripetal acceleration is the acceleration acting towards the centre of a circle for an object undergoing unifrom circular motion"},
+					  {name:"Centripetal Force", def:"Centripetal force is the force acting towards the centre of the circle for an object undergoing circular motion"},
+					  {name:"Periodic Time of Satellites", def:"For a satellite the periodic time squared is preportional to the radius of orbit cubed"},
+					  {name:"Relationship Between Period and Length for a Simple Pendulum", def:"Length of string is proportional to the period squared"},
+					  {name:"Transverse Wave", def:"The direction in which the energy travels is perpendicular to the direction of vibration of the particles of the medium"},
+					  {name:"Wavelength (Transverse)", def:"Wavelength is the distance between two successive crests"},
+					  {name:"Frequency", def:"Frequency is the number of oscillations made by a point in one second"},
+					  {name:"Amplitude", def:"The maximum displacement of a particle of the medium from its mean position"},
+					  {name:"Speed of a Wave", def:"The speed of a wave is the frequency multiplied by the wavelength"},
+					  {name:"Longitudinal Wave", def:"The direction in which the energy travels is parallel to the direction of vibration of the particles of the medium"},
+					  {name:"Wavelength (Longitudinal)", def:"Wavelength is the distance between two successive compressions"},
+					  {name:"Diffraction", def:"Diffraction is the spreading of a wavefront into the geometrical shadow when it passes through a gap or around an obstacle"},
+					  {name:"Interference", def:"Interference will occur when waves from coherent sources meet and combine. Constructive interference gives a wave of greater amplitude. Destructive interference gives a way of smaller amplitude"},
+					  {name:"Nodes", def:"Nodes are points along the medium where the displacement is zero"},
+					  {name:"Antinodes", def:"Antinodes are points along the medium where the displacement is a maximum"},
+					  {name:"Standing Wave", def:"A standing wave is a wave with no net transfer of energy"},
+					  {name:"Doppler Effect", def:"The apparent change in the frequency of a wave due to relative between the source and the stationary observer"},
+					  {name:"Fundamental Mode of Vibration", def:"The first harmonic"},
+					  {name:"Harmonics", def:"Harmonics are multiples of the fundamental mode of vibration"},
+					  {name:"Pitch", def:"Pitch is related to the frequency of a sound"},
+					  {name:"Quality", def:"The quality of a sound depends on the number and intensity of the harmonics(overtones) present"},
+					  {name:"Loudness", def:"The loudness of a sound depends on the amplitude of the vibration of the sound wave"},
+					  {name:"Natural Frequency", def:"When a system that is capable of vibrating is made to vibrate it will do so at its natural frequency"},
+					  {name:"Forced Frequency", def:"When an external vibration force acts on a system that is capable of vibrating the external force provides the forced frequency"},
+					  {name:"Resonance", def:"Resonance is the transfer of energy bwteen two bodies of the same natural frequencies"},
+					  {name:"Relationship Between Frequency and Length", def:"Frequency is inversely proportional to the length of a stretched string"},
+					  {name:"Relationship Between Frequency and Tension", def:"Frequency is proportional to the square of the tension of a stretched string"},
+					  {name:"Sound Intensity", def:"Sound intensity is the sound energy per second per unit area"},
+					  {name:"Frequency Range of Audibility", def:"For the human ear it is between 20Hz and 20,000Hz"},
+					  {name:"Sound Intensity Range of Audibility", def:"For the human ear it is between 1x10^-2 W m^-2 and 1 W m^-2"},
+					  {name:"Threshold of Hearing", def:"For a frequency of 1000Hz the threshold of hearing is the lowest sound intensity the human ear is capable of hearing"},
+					  {name:"Diffuse Reflection", def:"The incident beam of parallel light is reflected in all directions"},
+					  {name:"Regular Reflection", def:"The incident beam of parallel light is refelected as a beam of parallel light"},
+					  {name:"Laws of Reflection", def:"The incident ray, the reflected ray and the normal all lie in the same plane. Angle of incidence = angle of reflection"},
+					  {name:"Magnification", def:"Magnification is the image size over the object size which is equal to the image distance over the object distance"},
+					  {name:"Refraction of Light", def:"Refraction is the bending of light as it passes from one medium to another medium of a different refractive index"},
+					  {name:"Laws of Refraction", def:"The incident ray, the refracted ray and the normal all lie in the same plane. The sine of the angle of incidence is proportional to the sine of the angle of refraction"},
+					  {name:"Snell's Law", def:"The sine of the angle of incidence over the sine of the angle of refraction is equal to the refractive index"},
+					  {name:"Relationship Between Speeds and Refractive Index", def:"As light passes from one medium to another medium of different refractive index the speed changes. The relationship between the speeds and the refractive index is the speed of light in medium one over the speed of light in medium 2 is equal to the refractive index"},]
+
+		var usedNumbers = [];
+		var unusedQuotesArray = quotes;
+		var tempArray = [];
+
+		function startQuestions() {
+			//var ready = confirm("Ready?");
+			var ready = true;
+			if(ready == true) {
+				var randNum = Math.floor(Math.random()*(unusedQuotesArray.length));
+				var chosenQuote = unusedQuotesArray[randNum].name;
+				var def = unusedQuotesArray[randNum].def;
+				console.log(randNum);
+				tempArray = [];
+				for(var i = 0; i < unusedQuotesArray.length; i++) {
+					if(i !== randNum) {
+						tempArray.push(unusedQuotesArray[i]);
+					}
+					else {
+					}
+				}
+				unusedQuotesArray = tempArray;
+				if(unusedQuotesArray.length == 0) {
+					unusedQuotesArray = quotes; 
+					tempArray = [];
+				}
+				var answer = prompt("Define: "+chosenQuote);
+
+
+				if(answer.toString().toLowerCase() == def.toLowerCase()) {
+					alert("Correct!!\n\n"+chosenQuote+":\n\n"+def);		
+				}
+				else {
+					alert("Incorect :(\n\n"+chosenQuote+"\n\nYour Answer: "+answer+"\n\nActual Answer: "+def );
+				}
+				startQuestions();
+			}
+		}
+		window.addEventListener('load', function(event) {//simply starts the game only once the page has loaded
+			alert("To stop just press cancel at any time.\nIf you don't know just press OK, the answer will be revealed anyway\n\nTo start just press OK")
+			startQuestions();
+		})
+	</script>
+</body>
+</html>

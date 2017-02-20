@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quotes Test (Act 3)</title>
+	<style type="text/css">
+		body {
+			background-image: url("kingLear.png");
+			background-repeat: no-repeat;
+			background-size: 100% 10000%
+		}
+	</style>
+</head>
+<body>
+	<script type = "text/javascript">
+		var quotes = [{speaker: "Lear", text: "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes,"},
+					  {speaker: "Lear", text: "Singe my white head! And thou, all-shaking thunder, Strike flat the thick rotundity o' the world!"},
+					  {speaker: "Lear", text: "Crack nature's molds, all germens spill at once That make ingrateful man!"},
+					  {speaker: "Lear", text: "I am a man, More sinn'd against than sinning"},
+					  {speaker: "Lear", text: "The art of our necessities is strange, And can make vile things precious"},
+					  {speaker: "Lear", text: "O, that way madness lies; let me shun that;"},
+					  {speaker: "Lear", text: "Poor naked wretches, wheresoe'er you are, That bide the pelting of this pitiless storm,"},
+					  {speaker: "Lear", text: "O! I have ta'en Too little care of this! Take physic, pomp; Expose thyself to feel what wretches feel,"},
+					  {speaker: "Lear", text: "unaccomodated man is no more but such a poor, bare, forked animal as thou art"},
+					  {speaker: "The Fool", text: "He's mad, that trusts in the tameness of a wolf, a horse's health, a boy's love, or a whore's oath"},
+					  {speaker: "Regan", text: "Go, thrust him out at gates, and let him smell His way to Dover"},]
+
+		var usedNumbers = [];
+		var unusedQuotesArray = quotes;
+		var tempArray = [];
+
+		function startQuestions() {
+			//var ready = confirm("Ready?");
+			var ready = true;
+			if(ready == true) {
+				var randNum = Math.floor(Math.random()*(unusedQuotesArray.length));
+				var chosenQuote = unusedQuotesArray[randNum].text;
+				var chosenSpeaker = unusedQuotesArray[randNum].speaker;
+				tempArray = [];
+				for(var i = 0; i < unusedQuotesArray.length; i++) {
+					if(i !== randNum) {
+						tempArray.push(unusedQuotesArray[i]);
+					}
+					else {
+					}
+				}
+				unusedQuotesArray = tempArray;
+				if(unusedQuotesArray.length == 0) {
+					unusedQuotesArray = quotes; 
+					tempArray = [];
+				}
+				var wordsArray = chosenQuote.split(' ');
+				var hintString = (wordsArray[0]+" "+wordsArray[1]+" "+wordsArray[2]).toString();
+				var answer = prompt("Include hint in answer!!\n"+chosenSpeaker+": "+hintString);
+				if(answer.toString().toLowerCase() == chosenQuote.toLowerCase()) {
+					alert("Correct!!\n\nQuote:\n"+chosenSpeaker+": "+chosenQuote);		
+				}
+				else {
+					alert("Incorect :(\n\nYour answer:\n"+chosenSpeaker+": "+answer.toString()+"\n\nQuote:\n"+chosenSpeaker+": "+chosenQuote)
+				}
+				startQuestions();
+			}
+		}
+		window.addEventListener('load', function(event) {//simply starts the game only once the page has loaded
+			alert("King Lear Quotes Test(Act 3)\n\nTo stop just press cancel at any time.\nRemember to include the hint in your answer\nIf you don't know just press OK, the answer will be revealed anyway\n\nTo start just press OK")
+			startQuestions();
+		})
+	</script>
+</body>
+</html>
